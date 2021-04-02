@@ -1,0 +1,33 @@
+#canvas{
+    border: 2px solid black;
+}
+
+#bottomButton{
+    display: flex;
+}
+
+
+.buttonWrapper{
+    background-color: rgb(93,88,88);
+    width: 100px;
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.buttonTitle{
+    color: rgb(231, 228, 228);
+    font-size: 17px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

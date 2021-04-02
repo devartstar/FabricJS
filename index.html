@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <button onClick='toggleMode(modes.pan)'>Toggle Pan</button>
+    <button onClick='toggleMode(modes.drawing)'>Toggle Drawing</button>
+    Color: <input id='colorPicker' value="#000000" data-jscolor="{}">
+    <button onClick='clearCanvas(canvas, svgState)'>Clear Canvas</button>
+    <button onClick='restoreCanvas(canvas, svgState, backURL)'>Restore</button>
+    <canvas id='canvas' width='600' height="600"></canvas>
+
+    <div id="bottomButton">
+        <div class="buttonWrapper">
+            <p class="buttonTitle">Object</p>
+            <div class="button">
+                <button onClick="createRect(canvas)">Rect</button>
+                <button onClick="createCirc(canvas)">Circ</button>
+                <button onClick="groupObjects(canvas,group,true)">Group</button>
+                <button onClick="groupObjects(canvas,group,false)">Ungroup</button>
+            </div>
+        </div>
+
+        <div class="buttonWrapper">
+            <div class="buttonTitle">Image</div>
+            <input type="file" accept="images/*" id="myImg">
+        </div>
+    </div>
+
+
+
+    <script src='./fabric.min.js'></script>
+    <script src="./script.js"></script>
+    <script src="jscolor.js"></script>
+</body>
+
+</html>
